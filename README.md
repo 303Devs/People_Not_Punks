@@ -1,16 +1,54 @@
-# React + Vite
+# People Not Punks
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A curated pixel portrait NFT collection built on Base — inspired by early NFT portrait culture, reimagined through identity, individuality, and modern visual curation.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** + **Vite 7**
+- **Tailwind CSS 3**
+- **wagmi v2** + **viem v2** — Ethereum/Base wallet interactions
+- **RainbowKit v2** — wallet connection UI
+- **TanStack Query v5** — async state management
+- **React Router v7** — client-side routing
 
-## React Compiler
+## Pages
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Route | Description |
+|---|---|
+| `/` | Home — hero, featured portraits, trait highlights |
+| `/collection` | Full portrait collection |
+| `/about` | Project background |
+| `/faq` | Frequently asked questions |
+| `/mint` | Mint interface (state-driven: coming soon / allowlist / public / sold out) |
+| `/technical` | Technical and contract details |
+| `/creator` | Creator info |
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+### WalletConnect Setup
+
+Before running, replace the placeholder project ID in `src/lib/web3.jsx`:
+
+```js
+projectId: 'YOUR_WALLETCONNECT_PROJECT_ID'
+```
+
+Get a free project ID at [cloud.walletconnect.com](https://cloud.walletconnect.com).
+
+## Scripts
+
+| Command | Description |
+|---|---|
+| `npm run dev` | Start local dev server |
+| `npm run build` | Production build |
+| `npm run preview` | Preview production build |
+| `npm run lint` | Run ESLint |
+
+## Project Status
+
+In development. Supply, price, and contract details are TBD and will be published before launch. The collection deploys on **Base**.
