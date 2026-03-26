@@ -7,7 +7,7 @@ import { base } from 'wagmi/chains'
 const MINT_STATUS = 'coming_soon'
 
 const mintInfo = [
-  { label: 'Supply',         value: 'TBD' },
+  { label: 'Supply',         value: '500' },
   { label: 'Price',          value: 'TBD' },
   { label: 'Max per wallet', value: 'TBD' },
   { label: 'Chain',          value: 'Base' },
@@ -18,8 +18,8 @@ const mintInfo = [
 
 const statusConfig = {
   coming_soon: { label: 'Coming Soon',      dot: 'bg-graphite',  text: 'text-bone/50' },
-  allowlist:   { label: 'Allowlist Live',   dot: 'bg-violet',    text: 'text-violet' },
-  public:      { label: 'Public Mint Live', dot: 'bg-eteal animate-pulse', text: 'text-eteal' },
+  allowlist:   { label: 'Allowlist Live',   dot: 'bg-amber',    text: 'text-amber' },
+  public:      { label: 'Public Mint Live', dot: 'bg-amber animate-pulse', text: 'text-amber' },
   sold_out:    { label: 'Sold Out',         dot: 'bg-graphite',  text: 'text-bone/50' },
 }
 
@@ -66,9 +66,9 @@ function MintWidget() {
           <div>
             <p className="section-label mb-3">Quantity</p>
             <div className="flex items-center gap-4">
-              <button className="w-9 h-9 border border-graphite text-bone hover:border-violet transition-colors">−</button>
+              <button className="w-9 h-9 border border-graphite text-bone hover:border-amber hover:text-amber transition-all duration-200">−</button>
               <span className="text-bone w-8 text-center">1</span>
-              <button className="w-9 h-9 border border-graphite text-bone hover:border-violet transition-colors">+</button>
+              <button className="w-9 h-9 border border-graphite text-bone hover:border-amber hover:text-amber transition-all duration-200">+</button>
             </div>
           </div>
           <button className="btn-primary w-full text-center">
@@ -90,11 +90,11 @@ export default function Mint() {
       <section className="bg-void pt-32 pb-20">
         <div className="page-container">
           <p className="section-label mb-6">Mint</p>
-          <h1 className="text-5xl md:text-6xl font-display font-semibold text-bone leading-tight tracking-tight mb-6 max-w-2xl">
+          <h1 className="text-5xl md:text-6xl font-display font-semibold text-bone leading-[1.1] tracking-tight mb-6 max-w-2xl">
             Mint People Not Punks
           </h1>
           <p className="text-bone/60 font-light leading-relaxed text-lg max-w-lg">
-            A curated pixel portrait collection built with a more human lens.
+            500 photorealistic AI portraits. All proceeds go directly to the CurrencyForCivilization liquidity pool.
           </p>
         </div>
       </section>
@@ -136,8 +136,7 @@ export default function Mint() {
         <div className="page-container max-w-3xl">
           <p className="section-label mb-4">Transparency</p>
           <p className="text-graphite font-light leading-relaxed text-base">
-            People Not Punks is designed with clarity in mind. Mint details, contract information,
-            and release terms will be published clearly before launch.
+            All mint proceeds go directly into the CurrencyForCivilization (C4C) liquidity pool — a DeFi project within the Civil Protocol ecosystem, built by the same creator. This collection is designed to sell out. There is no profit motive. Contract information and full mint terms will be published before launch.
           </p>
         </div>
       </section>

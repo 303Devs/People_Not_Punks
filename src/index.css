@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Raleway:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,8 +6,8 @@
 
 @layer base {
   html {
-    background-color: #0B0B0D;
-    color: #F3F0E8;
+    background-color: #0D0B0F;
+    color: #F0EBE0;
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -16,8 +16,8 @@
   body {
     margin: 0;
     min-height: 100vh;
-    background-color: #0B0B0D;
-    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #0D0B0F;
+    font-family: 'Raleway', system-ui, sans-serif;
   }
 
   #root {
@@ -29,8 +29,8 @@
   * { box-sizing: border-box; }
 
   ::selection {
-    background-color: #6F2BFF;
-    color: #F3F0E8;
+    background-color: #C49A5C;
+    color: #0D0B0F;
   }
 
   a {
@@ -42,33 +42,29 @@
 }
 
 @layer components {
-  /* Primary: Signal Violet bg, Soft Bone text */
+  /* Primary: Amber bg, Void text */
   .btn-primary {
-    @apply inline-block px-7 py-3 bg-violet text-bone text-sm font-medium tracking-wide
-           hover:bg-violet/85 transition-colors duration-200 cursor-pointer rounded-sm;
+    @apply inline-block px-7 py-3 bg-amber text-void text-sm font-medium tracking-wide
+           hover:bg-amber/85 active:scale-[0.97]
+           transition-all duration-200 cursor-pointer rounded-sm;
   }
 
   /* Secondary: transparent, border, context-dependent */
   .btn-secondary-dark {
     @apply inline-block px-7 py-3 border border-graphite text-bone text-sm font-medium
-           tracking-wide hover:border-violet hover:text-violet transition-colors duration-200
-           cursor-pointer rounded-sm;
+           tracking-wide hover:border-amber hover:text-amber active:scale-[0.97]
+           transition-all duration-200 cursor-pointer rounded-sm;
   }
 
   .btn-secondary-light {
     @apply inline-block px-7 py-3 border border-mist text-graphite text-sm font-medium
-           tracking-wide hover:border-violet hover:text-violet transition-colors duration-200
-           cursor-pointer rounded-sm;
+           tracking-wide hover:border-amber hover:text-amber active:scale-[0.97]
+           transition-all duration-200 cursor-pointer rounded-sm;
   }
 
-  /* Section label — Signal Violet, mono, all-caps */
+  /* Section label — Amber, mono, all-caps */
   .section-label {
-    @apply text-xs font-mono text-violet tracking-widest uppercase;
-  }
-
-  /* Section label on dark backgrounds */
-  .section-label-bone {
-    @apply text-xs font-mono text-violet tracking-widest uppercase;
+    @apply text-xs font-mono text-amber tracking-widest uppercase;
   }
 
   .page-container {
@@ -79,4 +75,16 @@
   .divider-dark  { @apply border-t border-graphite; }
   /* Divider on light */
   .divider-light { @apply border-t border-mist; }
+}
+
+@layer utilities {
+  /* Warm atmospheric gradient overlay for dark (void) sections */
+  .bg-void {
+    background-image: linear-gradient(
+      135deg,
+      rgba(111, 43, 255, 0.07) 0%,
+      transparent 45%,
+      rgba(196, 154, 92, 0.05) 100%
+    );
+  }
 }

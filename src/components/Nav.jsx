@@ -29,7 +29,7 @@ export default function Nav() {
         {/* Wordmark */}
         <Link
           to="/"
-          className="text-sm font-mono tracking-widest text-bone uppercase hover:text-violet transition-colors duration-200"
+          className="text-sm font-mono font-medium tracking-widest text-bone uppercase hover:text-amber transition-colors duration-200"
         >
           PNP
         </Link>
@@ -43,7 +43,7 @@ export default function Nav() {
               end={to === '/'}
               className={({ isActive }) =>
                 `text-sm tracking-wide transition-colors duration-200 ${
-                  isActive ? 'text-violet' : 'text-bone/60 hover:text-bone'
+                  isActive ? 'text-amber' : 'text-bone/60 hover:text-bone'
                 }`
               }
             >
@@ -57,6 +57,7 @@ export default function Nav() {
           className="md:hidden text-bone/60 hover:text-bone transition-colors"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
+          aria-expanded={menuOpen}
         >
           <div className="flex flex-col gap-1.5 w-5">
             <span className={`block h-px bg-current transition-all duration-200 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
@@ -67,27 +68,29 @@ export default function Nav() {
       </div>
 
       {/* Mobile menu */}
-      {menuOpen && (
-        <div className="md:hidden bg-void border-b border-graphite">
-          <nav className="page-container py-6 flex flex-col gap-5">
-            {links.map(({ to, label }) => (
-              <NavLink
-                key={to}
-                to={to}
-                end={to === '/'}
-                onClick={() => setMenuOpen(false)}
-                className={({ isActive }) =>
-                  `text-sm tracking-wide transition-colors duration-200 ${
-                    isActive ? 'text-violet' : 'text-bone/60'
-                  }`
-                }
-              >
-                {label}
-              </NavLink>
-            ))}
-          </nav>
-        </div>
-      )}
+      <div
+        className={`md:hidden bg-void/98 border-b border-graphite overflow-hidden transition-all duration-300 ease-out ${
+          menuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <nav className="page-container py-7 flex flex-col gap-5">
+          {links.map(({ to, label }) => (
+            <NavLink
+              key={to}
+              to={to}
+              end={to === '/'}
+              onClick={() => setMenuOpen(false)}
+              className={({ isActive }) =>
+                `text-sm tracking-wide transition-colors duration-200 ${
+                  isActive ? 'text-amber' : 'text-bone/60 hover:text-bone'
+                }`
+              }
+            >
+              {label}
+            </NavLink>
+          ))}
+        </nav>
+      </div>
     </header>
   )
 }

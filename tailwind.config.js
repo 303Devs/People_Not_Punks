@@ -5,19 +5,18 @@ export default {
     extend: {
       colors: {
         // Core neutrals
-        void:     '#0B0B0D', // Void Black — hero bg, dark sections, footer, dark nav
-        bone:     '#F3F0E8', // Soft Bone — light sections, body bg in light areas
-        graphite: '#2A2D31', // Graphite — secondary text, dark borders, dark panels
-        mist:     '#D8DDE3', // Mist Gray — dividers, secondary borders, muted surfaces
+        void:     '#0D0B0F', // Void Black — hero bg, dark sections, footer, dark nav (warm charcoal, subtle purple undertone)
+        bone:     '#F0EBE0', // Soft Bone — light sections, body bg in light areas (warm cream)
+        graphite: '#2D2A2F', // Graphite — secondary text, dark borders, dark panels (warm-shifted)
+        mist:     '#CBC4B8', // Mist — warm taupe dividers, secondary borders, muted surfaces
         // Accent colors (use sparingly — 10% rule)
         violet:   '#6F2BFF', // Signal Violet — primary accent: buttons, labels, active states
-        eteal:    '#16C7C8', // Electric Teal — secondary accent: metadata, collection highlights
-        emagenta: '#D94BA8', // Soft Magenta — editorial/art-adjacent moments only
-        ablue:    '#3973D6', // Archive Blue — technical sections, links, product UI
+        amber:    '#C49A5C', // Warm Amber — secondary accent: editorial highlights, warm accents
+
       },
       fontFamily: {
-        display: ['"Space Grotesk"', 'sans-serif'],
-        sans:    ['Inter', 'system-ui', 'sans-serif'],
+        display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        sans:    ['Raleway', 'system-ui', 'sans-serif'],
         mono:    ['"DM Mono"', 'monospace'],
       },
     },
