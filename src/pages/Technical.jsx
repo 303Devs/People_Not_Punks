@@ -45,7 +45,7 @@ export default function Technical() {
             <p className="section-label mb-6">Metadata Architecture</p>
             <div className="grid sm:grid-cols-2 gap-px bg-amber">
               {[
-                { title: 'Trait structure',     desc: 'A layered portrait system across 14 categories: face shape, skin tone, eyes, brows, mouth expression, hair, eyewear, headwear, facewear, ear accessory, neckwear, clothing, background, and pronouns.' },
+                { title: 'Trait structure',     desc: 'A layered portrait system across 20 categories: skin tone, face shape, eyes, brows, mouth expression, hair, head hair color, hair accessory, facial hair, facial hair color, headwear, eyewear, facewear, ear accessory, neckwear, clothing, background, border, and profile.' },
                 { title: 'Pronoun metadata',    desc: 'Pronouns are included as an identity-layer trait — present in the metadata as one part of a broader character profile.' },
                 { title: 'Image hosting',       desc: 'Images and metadata are stored on IPFS for long-term, decentralized permanence.' },
                 { title: 'Metadata permanence', desc: 'Full metadata schema will be published before launch.' },
